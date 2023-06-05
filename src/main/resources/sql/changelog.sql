@@ -1,7 +1,7 @@
 --liquibase formatted sql
 
---changeset anupama:003_create_table
-CREATE TABLE example_table (
+--changeset anupama:001_create_table
+CREATE TABLE example (
   id serial PRIMARY KEY,
   name varchar(255) NOT NULL
 );
