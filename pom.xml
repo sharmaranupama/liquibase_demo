@@ -6,7 +6,13 @@
   <groupId>com.example</groupId>
   <artifactId>liquibase-postgres</artifactId>
   <version>1.0.0</version>
+ <configuration>
+          <!-- Liquibase properties -->
+          <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+          <changeLogFile>src/main/resources/sql/changelog.sql</changeLogFile>
+          <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 
+   </configuration>
   <!-- Dependencies -->
   <dependencies>
     <dependency>
