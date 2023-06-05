@@ -6,13 +6,8 @@
   <groupId>com.example</groupId>
   <artifactId>liquibase-postgres</artifactId>
   <version>1.0.0</version>
- <configuration>
-          <!-- Liquibase properties -->
-          <propertyFile>src/main/resources/liquibase.properties</propertyFile>
-          <changeLogFile>src/main/resources/sql/changelog.sql</changeLogFile>
-          <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 
-   </configuration>
+
   <!-- Dependencies -->
   <dependencies>
     <dependency>
@@ -30,16 +25,20 @@
 
   <!-- Build configuration -->
   <build>
+
+    <!-- Other build configurations -->
     <plugins>
       <!-- Liquibase Maven plugin -->
       <plugin>
         <groupId>org.liquibase</groupId>
         <artifactId>liquibase-maven-plugin</artifactId>
         <version>4.5.0</version>
+
         <configuration>
           <!-- Liquibase properties -->
           <propertyFile>src/main/resources/liquibase.properties</propertyFile>
           <changeLogFile>src/main/resources/sql/changelog.sql</changeLogFile>
+          <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 
         </configuration>
         <dependencies>
