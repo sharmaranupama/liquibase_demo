@@ -37,7 +37,7 @@
         <configuration>
           <!-- Liquibase properties -->
           <propertyFile>src/main/resources/liquibase.properties</propertyFile>
-          <changeLogFile>src/main/resources/sql/changelog.sql</changeLogFile>
+          <changeLogFile>src/main/resources/changelog.xml</changeLogFile>
           <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
 
         </configuration>
