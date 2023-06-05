@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- Project metadata -->
+  <groupId>com.example</groupId>
+  <artifactId>liquibase-postgres</artifactId>
+  <version>1.0.0</version>
+
+  <!-- Dependencies -->
+  <dependencies>
+    <dependency>
+      <groupId>org.liquibase</groupId>
+      <artifactId>liquibase-core</artifactId>
+      <version>4.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.23</version>
+    </dependency>
+    <!-- Other dependencies -->
+  </dependencies>
+
+  <!-- Build configuration -->
+  <build>
+    <plugins>
+      <!-- Liquibase Maven plugin -->
+      <plugin>
+        <groupId>org.liquibase</groupId>
+        <artifactId>liquibase-maven-plugin</artifactId>
+        <version>4.5.0</version>
+        <configuration>
+          <!-- Liquibase properties -->
+          <propertyFile>src/main/resources/liquibase.properties</propertyFile>
+          <changeLogFile>src/main/resources/sql/changelog.sql</changeLogFile>
+
+        </configuration>
+        <dependencies>
+          <!-- PostgreSQL JDBC driver -->
+          <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.23</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
